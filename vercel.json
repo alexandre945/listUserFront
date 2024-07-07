@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "public": "./",
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://list-user-backend.vercel.app/"
+      }
+    ]
+  }
+  
