@@ -68,7 +68,7 @@
     <script>
         // Função para buscar e renderizar produtos
         function fetchAndRenderProducts() {
-            fetch('https://list-user-backend.vercel.app/products')
+            fetch('https://list-user-backend.vercel.app/api/products')
                 .then(response => response.json())
                 .then(data => {
                     const productTableBody = document.getElementById('productTableBody');
@@ -89,7 +89,7 @@
 
         // Função para deletar um produto
         function deleteProduct(id) {
-            fetch(`http:https://list-user-backend.vercel.app/products/${id}`, {
+            fetch(`http:https://list-user-backend.vercel.app/api/products/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -109,7 +109,7 @@
             const name = document.getElementById('productName').value;
             const quantity = document.getElementById('productQuantity').value;
 
-            fetch('https://list-user-backend.vercel.app/products', {
+            fetch('https://list-user-backend.vercel.app/api/products', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
