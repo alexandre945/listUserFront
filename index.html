@@ -22,7 +22,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">CADASTRO DE PRODUTOS</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
                         <div class="card">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -127,6 +127,7 @@
             .catch((error) => {
                 console.error('Erro ao cadastrar produto:', error);
             });
+            fetchAndRenderProducts(); // Recarrega a lista de produtos
         });
 
         // Carrega a lista de produtos ao carregar a página
