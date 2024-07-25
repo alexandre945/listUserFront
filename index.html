@@ -125,7 +125,7 @@
 
             const name = document.getElementById('productName').value;
             const quantity = document.getElementById('productQuantity').value;
-
+                //função para cadastrar produtos
             fetch('https://list-user-backend.vercel.app/api/products', {
                 method: 'POST',
                 headers: {
@@ -135,9 +135,21 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Produto cadastrado:', data);
-                    fetchAndRenderProducts(); // Recarrega a lista de produtos
+                    // console.log('Produto cadastrado:', data);
+
+                    //alert
+                    alert('produto cadstrado com sucesso!');
+
+                    //fechar modal
+
+                    $('#exampleModal').modal('hiden');
+
+                     // Recarrega a lista de produtos
+
+                    fetchAndRenderProducts(); 
+
                     // Limpa o formulário
+                    
                     document.getElementById('productName').value = '';
                     document.getElementById('productQuantity').value = '';
                 })
