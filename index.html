@@ -77,12 +77,13 @@
             </table>
         </div>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    
     <script>
         // Função para buscar e renderizar produtos
         function fetchAndRenderProducts() {
@@ -139,14 +140,11 @@
                 .then(data => {
                     // console.log('Produto cadastrado:', data);
 
-                   
-
-                    //fechar modal
-
-                    $('#exampleModal').modal('hide');
-
                      //alert
                      alert('produto cadstrado com sucesso!');
+
+                    // Fechar o modal
+                    $('#exampleModal').modal('hide');
 
                      // Recarrega a lista de produtos
 
