@@ -140,27 +140,28 @@
                 .then(data => {
                     // console.log('Produto cadastrado:', data);
 
-                  
-
                     // Fechar o modal
                     $('#exampleModal').modal('hide');
 
                        //alert
-                       alert('produto cadstrado com sucesso!');
+                    alert('produto cadstrado com sucesso!');
 
                      // Recarrega a lista de produtos
 
-                    fetchAndRenderProducts(); 
+                    // fetchAndRenderProducts(); 
 
                     // Limpa o formulário
 
-                    document.getElementById('productName').value = '';
-                    document.getElementById('productQuantity').value = '';
+                   name.value = '';
+                   quantity.value = '';
                 })
                 .catch((error) => {
                     console.error('Erro ao cadastrar produto:', error);
                 });
-            fetchAndRenderProducts(); // Recarrega a lista de produtos
+                // Recarrega a lista de produtos
+            fetchAndRenderProducts(); 
+            
+            
         });
 
         // Carrega a lista de produtos ao carregar a página
