@@ -49,7 +49,7 @@
                                         required />
                                 </div>
                                 <button type="submit"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5  text-center">Cadastrar</button>
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cadastrar</button>
                             </form>
                         </div>
                     </div>
@@ -128,8 +128,8 @@
 
             const name = document.getElementById('productName').value;
             const quantity = document.getElementById('productQuantity').value;
-            
-                //função para cadastrar produtos
+
+            // Função para cadastrar produtos
             fetch('https://list-user-backend.vercel.app/api/products', {
                 method: 'POST',
                 headers: {
@@ -139,30 +139,22 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    // console.log('Produto cadastrado:', data);
-
                     // Fechar o modal
                     $('#exampleModal').modal('hide');
 
-                       //alert
-                    alert('produto cadstrado com sucesso!');
+                    // Exibir alerta
+                    alert('Produto cadastrado com sucesso!');
 
-                     // Recarrega a lista de produtos
+                    // Recarregar a lista de produtos
+                    fetchAndRenderProducts();
 
-                    fetchAndRenderProducts(); 
-
-                    // Limpa o formulário
-
-                   name.value = '';
-                   quantity.value = '';
+                    // Limpar o formulário
+                    document.getElementById('productName').value = '';
+                    document.getElementById('productQuantity').value = '';
                 })
                 .catch((error) => {
                     console.error('Erro ao cadastrar produto:', error);
                 });
-                // Recarrega a lista de produtos
-            fetchAndRenderProducts(); 
-            
-            
         });
 
         // Carrega a lista de produtos ao carregar a página
