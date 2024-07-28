@@ -71,7 +71,6 @@
                     </tr>
                 </thead>
                 <tbody id="productTableBody">
-
                     <!-- Produtos serão renderizados aqui -->
                 </tbody>
             </table>
@@ -139,6 +138,8 @@
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log('Produto cadastrado:', data); // Log para depuração
+
                     // Fechar o modal
                     $('#exampleModal').modal('hide');
 
