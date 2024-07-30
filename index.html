@@ -24,6 +24,9 @@
         </div>
     </header>
     <main>
+            <div class="w-auto bg-slate-300" id="deleteAlert">
+                <p class="text-green p-4">PRODUTO DELETADO COM SUCESSO</p>
+            </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -84,6 +87,17 @@
         crossorigin="anonymous"></script>
     
     <script>
+   
+        //função para mostrar e esconder alert de produto deletado
+
+        function showDeleteAlert() {
+            const alert = document.getElementById('deleteAlert');
+            alert.style.display = 'block';
+            setTimeout(()=> {
+                alert.style.display = 'none';
+            }, 3000);
+        }
+
         // Função para buscar e renderizar produtos
         function fetchAndRenderProducts() {
             fetch('https://list-user-backend.vercel.app/api/products')
@@ -117,6 +131,7 @@
                 .then(response => response.json())
                 .then(data => {
                     console.log('Produto deletado:', data);
+                    showDeleteAlert();
                     fetchAndRenderProducts(); // Recarrega a lista de produtos
                 })
                 .catch(error => console.error('Erro ao deletar produto:', error));
