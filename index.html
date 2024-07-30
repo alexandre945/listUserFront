@@ -72,11 +72,12 @@
                     </tr>
                 </thead>
                 <tbody id="productTableBody">
-                    <div class="w-auto bg-slate-300" id="deleteAlert">
-                        <p style="color: green;" class="p-4">PRODUTO DELETADO COM SUCESSO</p>
-                    </div>
+                
                     <!-- Produtos serão renderizados aqui -->
                 </tbody>
+                <div class="w-auto bg-slate-300" id="deleteAlert">
+                    <p style="color: green;" class="p-4">PRODUTO DELETADO COM SUCESSO</p>
+                </div>
             </table>
         </div>
     </main>
@@ -96,7 +97,7 @@
             alert.style.display = 'block';
             setTimeout(()=> {
                 alert.style.display = 'none';
-            }, 3000);
+            }, 2000);
         }
 
         // Função para buscar e renderizar produtos
