@@ -16,7 +16,7 @@
             <h1 class="text-2xl font-bold p-4 pt-2">LISTAS DE COMPRAS DA NEIA</h1>
             <div class="">
                 <fieldset class="font-medium" for="">Adicionar intens a lista click neste botão</fieldset>
-                <button type="button" class="bg-indigo-500 pl-4 pr-4 pt-2 pb-2 text-white rounded" data-bs-toggle="modal"
+                <button type="button" class="bg-indigo-500 pl-4 pr-4 pt-2 pb-2 mt-2 text-white rounded" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
                     ADICIONAR
                 </button>
@@ -75,7 +75,7 @@
                 
                     <!-- Produtos serão renderizados aqui -->
                 </tbody>
-                <div class="alert alert-success" id="deleteAlert" style="display:none">
+                <div class="alert alert-success text-center" id="deleteAlert" style="display:none">
                     <p class="p-4">PRODUTO DELETADO COM SUCESSO</p>
                 </div>
             </table>
@@ -97,7 +97,7 @@
             alert.style.display = 'block';
             setTimeout(()=> {
                 alert.style.display = 'none';
-            }, 2000);
+            }, 3000);
         }
 
         // Função para buscar e renderizar produtos
