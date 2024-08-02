@@ -78,6 +78,10 @@
                 <div class="alert alert-success text-center" id="deleteAlert" style="display:none">
                     <p class="p-4">PRODUTO DELETADO COM SUCESSO</p>
                 </div>
+
+                <div class="alert alert-success text-center" id="insertAlert" style="display:none">
+                    <p class="p-4">PRODUTO CADASTRADO COM SUCESSO</p>
+                </div>
             </table>
         </div>
     </main>
@@ -98,6 +102,17 @@
             setTimeout(()=> {
                 alert.style.display = 'none';
             }, 3000);
+        }
+
+        //função para mostrarr e esconder alert de produto cadstrado
+
+        function showIsertAlert() {
+            const  isertAlert = document.getElementById('insertAlert');
+            isertAlert.style.display = 'block';
+            setTimeout(()=> {
+                isertAlert.style = 'none';
+            }, 4000);
+
         }
 
         // Função para buscar e renderizar produtos
@@ -161,7 +176,8 @@
                     $('#exampleModal').modal('hide');
 
                     // Exibir alerta
-                    // alert('Produto cadastrado com sucesso!');
+                    // exibir alert de produto cadastrado com sucesso!
+                    showIsertAlert() 
 
                     // Recarregar a lista de produtos
                     fetchAndRenderProducts();
